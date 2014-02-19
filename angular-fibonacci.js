@@ -30,7 +30,6 @@ angular.module('sqwiggle-feed.fibonacci').factory('Fibonacci', ['$timeout', func
 		},
 		tick: function(seconds) {
 			var self = this;
-			console.log('tick', self);
 			self.timeout = $timeout(function(){
 				self.next = self.series[self.index] + self.series[self.index + 1];
 				self.series.push(self.next);
