@@ -9,7 +9,42 @@ Angular Fibonacci is a tiny AngularJS Service that lets you poll your server usi
 ##Installation
 * Download the file manually from GitHub or use [Bower](http://bower.io/):
 
-```bower install fibonacci-angular```
+```bower install angular-fibonacci```
 
 * Make sure you add a reference to the Fibonacci service:
 
+```html
+<!-- Application Services -->
+<script type="text/javascript" src="public/lib/angular-fibonacci/fibonacci.js"></script>
+```
+
+* Then load the module:
+``` angular.module('angular-fibonacci', []); ```
+
+## Usage
+
+Add the *Fibonacci* dependency to your controller like so:
+
+```javascript
+angular.module('myModule').controller('MyController', ['$scope', 'Fibonacci',
+	function ($scope, Fibonacci) {
+	  ...
+}]);
+```
+
+Then use start polling with a callback, like so:
+
+```javascript
+Fibonacci.start({
+  callback: function() {
+    // called on 1, 2, 3, 5, 8,... seconds
+    console.log('polling the server');
+  }
+});
+```
+### Options
+
+| Property                | Description          |
+| ------------------------|:-------------:|
+| max                     | maximum number of steps into the Fibonacci Series (default: 5) |
+| callback (required)     | this function gets called whenever a timer ends that is set to one of the elements in the Fibonacci series, so after: 1, 2, 3, 5, 8, ... seconds |
