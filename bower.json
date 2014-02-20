@@ -1,0 +1,27 @@
+{
+  "name": "angular-fibonacci",
+  "main": "angular-fibonacci.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Kukiwon/angular-fibonacci",
+  "authors": [
+    "Jordy van Kuijk <jvankuijk@me.com>"
+  ],
+  "description": "Use Fibonacci-polling in your AngularJS projects.",
+  "keywords": [
+    "angularjs",
+    "angular",
+    "fibonacci",
+    "javascript",
+    "service",
+    "polling",
+    "ajax"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
