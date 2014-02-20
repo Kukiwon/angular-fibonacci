@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sqwiggle-feed.fibonacci').factory('Fibonacci', ['$timeout', function($timeout) {
+angular.module('angular-fibonacci').factory('Fibonacci', ['$timeout', function($timeout) {
 	return  {
 		isPolling: false,
 		series: [],
